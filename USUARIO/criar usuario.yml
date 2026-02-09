@@ -13,8 +13,8 @@ http:
     type: json
     data: |-
       {
-        "nome": "Caio",
-        "email": "caio@email.com",
+        "nome": "Caio André34323",
+        "email": "caio@emailsasaaaa.com",
         "senha": "Aa12344321"
       }
   auth: inherit
@@ -23,9 +23,10 @@ runtime:
   scripts:
     - type: after-response
       code: |-
-        if (bru.response.code === 200 || bru. response.code === 201) {
-            const response = pm.response.json();
-            pm.environment.set("user_id", response.data.id);
+        const jsonData = res.getStatus()
+
+        if (res.getStatus() === 200 || res.getStatus() === 201) {
+            bru.setEnvVar("user_id", res.getBody().data.id);
         }
 
 settings:

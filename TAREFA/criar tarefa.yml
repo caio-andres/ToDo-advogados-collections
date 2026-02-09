@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-        "titulo": "ir ao fórum",
-        "descricao": "bora la",
+        "titulo": "salvar o cliente",
+        "descricao": "novamente!",
         "status": "pendente"
       }
   auth:
