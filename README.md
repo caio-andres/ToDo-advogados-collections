@@ -1,6 +1,6 @@
 # API ToDo Advogados
 
-Sistema de gerenciamento de tarefas para escritórios de advocacia.
+Sistema de gerenciamento de tarefas para advogados utilizarem no dia-a-dia! :D
 
 ## Configuração
 
