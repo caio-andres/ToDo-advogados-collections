@@ -1,0 +1,4 @@
+name: Dev
+variables:
+  - name: url
+    value: https://rnw9y7nof9.execute-api.us-east-1.amazonaws.com/dev/

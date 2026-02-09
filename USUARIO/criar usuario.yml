@@ -1,0 +1,35 @@
+info:
+  name: criar usuario
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}usuarios"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "Caio",
+        "email": "caio@email.com",
+        "senha": "Aa12344321"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        if (bru.response.code === 200 || bru. response.code === 201) {
+            const response = pm.response.json();
+            pm.environment.set("user_id", response.data.id);
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
